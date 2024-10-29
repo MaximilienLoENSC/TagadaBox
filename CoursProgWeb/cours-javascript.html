@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours sur JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Cours Complet de JavaScript</h1>
+        <p>Maîtrisez JavaScript de A à Z !</p>
+        <nav>
+            <div class="menu-burger" onclick="toggleMenu()">☰</div>
+            <ul id="menu" class="menu hidden">
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#variables">Variables</a></li>
+                <li><a href="#operators">Opérateurs</a></li>
+                <li><a href="#control-structures">Structures de contrôle</a></li>
+                <li><a href="#functions">Fonctions</a></li>
+                <li><a href="#dom">DOM</a></li>
+                <li><a href="#events">Événements</a></li>
+                <li><a href="#async">Async/Await</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="intro">
+        <h2>Introduction à JavaScript</h2>
+        <p>JavaScript est un langage de programmation principalement utilisé pour rendre les pages web interactives.</p>
+    </section>
+
+    <section id="variables">
+        <h2>Variables et Types de Données</h2>
+        <div id="variables-example" >
+            <p>En JavaScript, on utilise <code>let</code>, <code>const</code>, et <code>var</code> pour déclarer des variables.</p>
+            <pre>
+let nom = "Alice"; // chaîne de caractères
+const age = 30;    // nombre
+let estEtudiant = true; // booléen
+            </pre>
+            <p>Essayez dans la console pour voir les types de données et manipuler des variables.</p>
+        </div>
+    </section>
+
+    <section id="operators">
+        <h2>Opérateurs</h2>
+        <div id="operators-example" >
+            <p>Les opérateurs permettent de manipuler les valeurs en JavaScript.</p>
+            <pre>
+let x = 5;
+let y = 3;
+let sum = x + y; // addition : 8
+let diff = x - y; // soustraction : 2
+let prod = x * y; // multiplication : 15
+let quotient = x / y; // division : 1.666...
+            </pre>
+        </div>
+    </section>
+
+    <section id="control-structures">
+        <h2>Structures de Contrôle</h2>
+        <div id="control-example" >
+            <p>Les conditions <code>if</code> permettent de prendre des décisions dans le code.</p>
+            <pre>
+let heure = 14;
+if (heure &lt; 12) {
+    console.log("Bonjour !");
+} else {
+    console.log("Bon après-midi !");
+}
+            </pre>
+            <button onclick="runConditionExample()">Tester dans la console</button>
+        </div>
+
+        <button onclick="toggleContent('loop-example')">Voir un exemple de boucle</button>
+        <div id="loop-example" class="hidden">
+            <p>Les boucles <code>for</code> permettent de répéter une action plusieurs fois.</p>
+            <pre>
+for (let i = 0; i &lt; 5; i++) {
+    console.log("Nombre: " + i);
+}
+            </pre>
+        </div>
+    </section>
+
+    <section id="functions">
+        <h2>Fonctions</h2>
+        <div id="functions-example" >
+            <p>Les fonctions permettent de réutiliser du code facilement.</p>
+            <pre>
+function saluer(nom) {
+    return "Bonjour, " + nom + "!";
+}
+console.log(saluer("Alice")); // Affiche "Bonjour, Alice!"
+            </pre>
+            <button onclick="saluer('Alice')">Tester dans la console</button>
+        </div>
+    </section>
+
+    <section id="dom">
+        <h2>Manipulation du DOM</h2>
+        <p>JavaScript peut interagir avec le contenu HTML d'une page grâce au Document Object Model (DOM).</p>
+        <pre>
+            // Manipulation du DOM : Changer le titre
+function changeTitle() {
+    document.querySelector("header h1").innerText = "Cours de JavaScript Modifié!";
+}
+        </pre>
+        <button onclick="changeTitle()">Changer le titre</button>
+    </section>
+
+    <section id="events">
+        <h2>Événements</h2>
+        <p>Les événements permettent d'interagir avec l'utilisateur, par exemple avec des clics ou des touches du clavier.</p>
+        <button onclick="toggleContent('events-example')">Voir un exemple d'événement</button>
+        <div id="events-example" class="hidden">
+            <pre>
+document.getElementById("monBouton").addEventListener("click", function() {
+    alert("Bouton cliqué !");
+});
+            </pre>
+            <button id="monBouton">Bouton à cliquer</button>
+        </div>
+    </section>
+
+    <section id="async">
+        <h2>Async / Await et Promises</h2>
+        <p>Les Promises permettent de gérer des opérations asynchrones, et async/await simplifie leur utilisation.</p>
+        <button onclick="toggleContent('async-example')">Voir un exemple d'async/await</button>
+        <div id="async-example" class="hidden">
+            <pre>
+async function fetchData() {
+    let response = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+    let data = await response.json();
+    console.log(data);
+}
+fetchData();
+            </pre>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2023 Cours de Programmation Web</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

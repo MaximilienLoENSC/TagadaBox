@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours Programmation Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Cours de Programmation Web</h1>
+        <p>Apprenez les bases de HTML, CSS, et JavaScript</p>
+
+        <!-- Menu Burger -->
+        <nav>
+            <div class="menu-burger" onclick="toggleMenu()">
+                ☰
+            </div>
+            <ul id="menu" class="menu hidden">
+                <li><a href="#html-section">HTML</a></li>
+                <li><a href="#css-section">CSS</a></li>
+                <li><a href="#js-section">JavaScript</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sections du cours -->
+    <section id="html-section">
+        <h2>HTML : Balises et Structures</h2>
+        <img src="balise.png" alt="Element=Balise+contenu">
+        <button onclick="toggleContent('html-example')">Voir un exemple de balises HTML</button>
+        <div id="html-example" class="hidden">
+            <h3>Exemple de balises HTML</h3>
+            <ul>
+                <li>&lt;p&gt;Ceci est un paragraphe.&lt;/p&gt;</li>
+                <li>&lt;a href='url'&gt;Ceci est un lien&lt;/a&gt;</li>
+                <li>&lt;img src='image.png' alt='description'&gt;</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="css-section">
+        <h2>CSS : Styliser la page</h2>
+        <button onclick="toggleContent('css-example')">Voir un exemple de CSS</button>
+        <div id="css-example" class="hidden">
+            <h3>Exemple de CSS</h3>
+            <pre>
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+h1 {
+    color: #0073e6;
+    text-align: center;
+}
+            </pre>
+        </div>
+
+        <!-- Partie Media Queries -->
+        <h3>Media Queries</h3>
+        <button onclick="toggleContent('media-queries')">Voir les explications des media queries</button>
+        <div id="media-queries" class="hidden">
+            <p>Les <strong>media queries</strong> permettent d’adapter le style CSS en fonction de la taille de l’écran. Par exemple, elles permettent de changer la mise en page sur les appareils mobiles.</p>
+            <pre>
+@media (max-width: 768px) {
+    body {
+        background-color: #e0e0e0;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+}
+            </pre>
+            <p>Dans cet exemple, les styles seront appliqués uniquement si la largeur de l’écran est inférieure ou égale à 768 pixels.</p>
+        </div>
+
+        <!-- Partie Flexbox -->
+        <h3>Flexbox</h3>
+        <button onclick="toggleContent('flexbox')">Voir les explications de Flexbox</button>
+        <div id="flexbox" class="hidden">
+            <p><strong>Flexbox</strong> est un modèle de mise en page qui permet d’organiser des éléments de manière flexible. Il est utile pour créer des mises en page réactives et aligner des éléments.</p>
+            <pre>
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+            </pre>
+            <p>Dans cet exemple, les éléments à l'intérieur de la <code>.container</code> sont centrés horizontalement et verticalement.</p>
+        </div>
+    </section>
+
+    <section id="js-section">
+        <h2>JavaScript : Dynamiser la page</h2>
+        <button onclick="toggleContent('js-example')">Voir un exemple de JavaScript</button>
+        <div id="js-example" class="hidden">
+            <h3>Exemple de JavaScript</h3>
+            <pre>
+document.getElementById("monBouton").addEventListener("click", function() {
+    alert("Bouton cliqué !");
+});
+            </pre>
+        </div>
+        <p>Introduction aux bases de JavaScript.</p>
+        <button onclick="window.location.href='cours-javascript.html'">Voir le cours complet sur JavaScript</button>
+    </section>
+
+    <footer>
+        <p>© 2023 Cours de Programmation Web</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

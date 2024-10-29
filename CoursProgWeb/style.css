@@ -1,0 +1,130 @@
+/* Style global */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* En-tête */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #0073e6;
+    color: #fff;
+    position: relative;
+}
+
+/* Menu Burger */
+.menu-burger {
+    font-size: 1.5em;
+    cursor: pointer;
+    display: none; /* Caché par défaut sur les grands écrans */
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+/* Style caché pour le menu */
+.hidden {
+    display: none;
+}
+
+/* Affichage du menu burger sur les petits écrans */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #0073e6;
+        position: absolute;
+        top: 70px;
+        width: 100%;
+        left: 0;
+    }
+
+    .menu li {
+        text-align: center;
+        padding: 10px 0;
+        border-top: 1px solid #ffffff50;
+    }
+
+    .menu-burger {
+        display: block; /* Affiche le burger sur les petits écrans */
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: white;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+}
+
+/* Sections */
+section {
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* Boutons */
+button {
+    background-color: #0073e6;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+/* Rendre l'image responsive */
+img {
+    max-width: 100%;   /* L'image ne dépassera pas 100% de la largeur de son conteneur */
+    height: auto;      /* Conserve le ratio de l'image */
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #0073e6;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
